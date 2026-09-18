@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Harshuu ❤️</title>
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: #030308;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   CINEMATIC BACKGROUND
+========================= */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(120, 0, 60, 0.30),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 85% 70%,
+            rgba(255, 0, 70, 0.18),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(60, 0, 100, 0.15),
+            transparent 45%
+        );
+
+    pointer-events: none;
+    z-index: -2;
+}
+
+
+/* =========================
+   STARS
+========================= */
+
+.stars {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.star {
+    position: absolute;
+
+    width: 2px;
+    height: 2px;
+
+    background: white;
+    border-radius: 50%;
+
+    animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+
+    from {
+        opacity: 0.2;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =========================
+   PAGE SYSTEM
+========================= */
+
+.page {
+    display: none;
+
+    min-height: 100vh;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px 20px;
+
+    position: relative;
+}
+
+.page.active {
+    display: flex;
+
+    animation: pageIn 0.8s ease;
+}
+
+@keyframes pageIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+
+    width: min(560px, 100%);
+
+    padding: 50px 30px;
+
+    text-align: center;
+
+    background:
+        rgba(255,255,255,0.06);
+
+    border:
+        1px solid rgba(255,255,255,0.14);
+
+    border-radius: 30px;
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 20px 80px rgba(0,0,0,0.7),
+
+        inset 0 0 40px
+        rgba(255,255,255,0.02);
+}
+
+
+/* =========================
+   HEADINGS
+========================= */
+
+h1 {
+
+    font-family: Georgia, serif;
+
+    font-size:
+        clamp(3rem, 10vw, 6rem);
+
+    font-style: italic;
+
+    line-height: 1.05;
+
+    margin-bottom: 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff3768,
+            #ffffff,
+            #ff5c83
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+
+    text-shadow:
+        0 0 35px rgba(255,30,80,0.3);
+}
+
+
+h2 {
+
+    font-family: Georgia, serif;
+
+    font-size:
+        clamp(2rem, 7vw, 4rem);
+
+    font-style: italic;
+
+    margin-bottom: 20px;
+}
+
+
+.subtitle {
+
+    color: #d6d6d6;
+
+    font-size: 1.05rem;
+
+    line-height: 1.7;
+
+    margin-bottom: 35px;
+}
+
+
+.small-title {
+
+    text-transform: uppercase;
+
+    letter-spacing: 4px;
+
+    font-size: 11px;
+
+    color: #999;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+
+    border: 1px solid #ff315f;
+
+    padding:
+        15px 30px;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff1744,
+            #ff4f79
+        );
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 0 20px
+        rgba(255,30,70,0.5);
+}
+
+button:hover {
+
+    transform:
+        scale(1.08);
+
+    box-shadow:
+        0 0 35px
+        rgba(255,30,70,0.8);
+}
+
+
+/* =========================
+   BIG HEART
+========================= */
+
+.big-heart {
+
+    font-size: 90px;
+
+    margin: 20px;
+
+    animation:
+        heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+
+    0%,100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+
+/* =========================
+   LIGHTS
+========================= */
+
+.lights {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    display: none;
+
+    justify-content:
+        space-around;
+
+    padding: 15px;
+
+    z-index: 100;
+
+    pointer-events: none;
+}
+
+.lights.show {
+    display: flex;
+}
+
+.bulb {
+
+    width: 15px;
+    height: 15px;
+
+    border-radius: 50%;
+
+    background: #ffd75e;
+
+    box-shadow:
+        0 0 10px white,
+        0 0 25px #ffd75e,
+        0 0 45px #ff9d00;
+
+    animation:
+        bulbGlow 1.2s infinite alternate;
+}
+
+@keyframes bulbGlow {
+
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message-card {
+
+    line-height: 1.9;
+
+    color: #e8e8e8;
+
+    font-size: 16px;
+}
+
+.message-card h2 {
+
+    color: #ff6687;
+
+    margin-bottom: 30px;
+}
+
+.message-card strong {
+
+    color: #ff6687;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-page {
+
+    align-items:
+        flex-start;
+
+    padding-top: 80px;
+}
+
+
+.gallery-container {
+
+    width:
+        min(1100px, 100%);
+
+    text-align: center;
+}
+
+
+.gallery-title {
+
+    font-family: Georgia, serif;
+
+    font-style: italic;
+
+    font-size:
+        clamp(3rem, 9vw, 5rem);
+
+    margin-bottom: 15px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff3c6c,
+            white,
+            #ff3c6c
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+
+.gallery-subtitle {
+
+    color: #aaa;
+
+    margin-bottom: 50px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   PHOTO GRID
+========================= */
+
+.gallery {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+/* =========================
+   PHOTO CARD
+========================= */
+
+.photo-card {
+
+    height: 300px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #17131c,
+            #08070c
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,0.12);
+
+    box-shadow:
+        0 15px 45px
+        rgba(0,0,0,0.7);
+
+    transition:
+        0.4s ease;
+
+    cursor: pointer;
+}
+
+
+.photo-card:hover {
+
+    transform:
+        translateY(-10px)
+        scale(1.02);
+
+    border-color:
+        rgba(255,60,100,0.5);
+
+    box-shadow:
+        0 0 35px
+        rgba(255,40,90,0.35);
+}
+
+
+.photo-card img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        0.6s ease;
+}
+
+
+.photo-card:hover img {
+
+    transform:
+        scale(1.1);
+}
+
+
+/* =========================
+   PHOTO PLACEHOLDER
+========================= */
+
+.placeholder {
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    color: #777;
+
+    background:
+        linear-gradient(
+            135deg,
+            #15121a,
+            #07070c
+        );
+}
+
+
+.placeholder span {
+
+    font-size: 50px;
+}
+
+
+.placeholder p {
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   FINAL PAGE
+========================= */
+
+.final-page {
+
+    text-align: center;
+}
+
+
+.final-title {
+
+    font-family: Georgia, serif;
+
+    font-style: italic;
+
+    font-size:
+        clamp(3rem, 10vw, 6rem);
+
+    line-height: 1.2;
+
+    color: #ff5279;
+
+    text-shadow:
+        0 0 25px
+        rgba(255,50,90,0.5);
+}
+
+
+.final-subtitle {
+
+    color: #aaa;
+
+    margin: 20px;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   FLOATING EMOJIS
+========================= */
+
+.floating {
+
+    position: fixed;
+
+    bottom: -50px;
+
+    pointer-events: none;
+
+    z-index: 200;
+
+    animation:
+        floatUp 5s linear forwards;
+}
+
+
+@keyframes floatUp {
+
+    from {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 1;
+    }
+
+    to {
+
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 750px) {
+
+    .gallery {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .photo-card {
+
+        height: 250px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .card {
+
+        padding:
+            40px 20px;
+    }
+
+    .gallery {
+
+        grid-template-columns: 1fr;
+    }
+
+    .photo-card {
+
+        height: 360px;
+    }
+
+    h1 {
+
+        font-size: 3rem;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     STARS
+========================= -->
+
+<div class="stars" id="stars"></div>
+
+
+<!-- =========================
+     LIGHT BULBS
+========================= -->
+
+<div class="lights" id="lights">
+
+    <div class="bulb"></div>
+    <div class="bulb"></div>
+    <div class="bulb"></div>
+    <div class="bulb"></div>
+    <div class="bulb"></div>
+    <div class="bulb"></div>
+    <div class="bulb"></div>
+    <div class="bulb"></div>
+    <div class="bulb"></div>
+    <div class="bulb"></div>
+    <div class="bulb"></div>
+    <div class="bulb"></div>
+
+</div>
+
+
+
+<!-- =========================
+     PAGE 1
+========================= -->
+
+<section
+    class="page active"
+    id="page1"
+>
+
+    <div class="card">
+
+        <div class="big-heart">
+            ❤️
+        </div>
+
+        <p class="small-title">
+            A little surprise for
+        </p>
+
+        <h1>
+            Harshuu
+        </h1>
+
+        <p class="subtitle">
+
+            Someone special deserves
+            something special. ✨
+
+        </p>
+
+        <button
+            onclick="nextPage('page2')"
+        >
+
+            🎁 OPEN YOUR GIFT
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PAGE 2
+========================= -->
+
+<section
+    class="page"
+    id="page2"
+>
+
+    <div class="card">
+
+        <p class="small-title">
+            Today is not an ordinary day
+        </p>
+
+        <h2>
+            It's Your Special Day 🎂
+        </h2>
+
+        <p class="subtitle">
+
+            The day the world got
+            a little brighter. ✨
+
+        </p>
+
+        <button
+            onclick="nextPage('page3')"
+        >
+
+            CONTINUE →
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PAGE 3
+========================= -->
+
+<section
+    class="page"
+    id="page3"
+>
+
+    <div class="card">
+
+        <div class="big-heart">
+            🌸
+        </div>
+
+        <h2>
+            Hello Madam Ji 👀
+        </h2>
+
+        <p class="subtitle">
+
+            Ab thoda special treatment
+            toh banta hai. 😌
+
+        </p>
+
+        <button
+            onclick="nextPage('page4')"
+        >
+
+            NEXT →
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PAGE 4
+========================= -->
+
+<section
+    class="page"
+    id="page4"
+>
+
+    <div class="card">
+
+        <p class="small-title">
+            The celebration begins
+        </p>
+
+        <h2>
+            Let's Set The Mood ✨
+        </h2>
+
+        <p class="subtitle">
+
+            First...
+
+        </p>
+
+        <button
+            onclick="turnOnLights()"
+        >
+
+            💡 TURN ON LIGHTS
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PAGE 5
+========================= -->
+
+<section
+    class="page"
+    id="page5"
+>
+
+    <div class="card">
+
+        <div class="big-heart">
+            🎵
+        </div>
+
+        <h2>
+            Now, Some Music
+        </h2>
+
+        <p class="subtitle">
+
+            Every birthday needs
+            its own soundtrack. 🎶
+
+        </p>
+
+        <button
+            onclick="playMusic()"
+        >
+
+            🎵 PLAY MUSIC
+
+        </button>
+
+        <br><br>
+
+        <button
+            onclick="nextPage('page6')"
+        >
+
+            NEXT →
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PAGE 6
+========================= -->
+
+<section
+    class="page"
+    id="page6"
+>
+
+    <div class="card">
+
+        <p class="small-title">
+            One little message
+        </p>
+
+        <h2>
+            Before We Continue...
+        </h2>
+
+        <p class="subtitle">
+
+            There's something
+            I want you to know. ❤️
+
+        </p>
+
+        <button
+            onclick="nextPage('page7')"
+        >
+
+            💌 SHOW MESSAGE
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PAGE 7
+========================= -->
+
+<section
+    class="page"
+    id="page7"
+>
+
+    <div class="card message-card">
+
+        <h2>
+            My Dearest Harshuu ❤️
+        </h2>
+
+        <p>
+
+            Happy Birthday! 🎂✨
+
+            <br><br>
+
+            I hope this beautiful day
+            brings you countless reasons
+            to smile.
+
+            <br><br>
+
+            May this new chapter of your
+            life be filled with happiness,
+            success, laughter and
+            unforgettable memories.
+
+            <br><br>
+
+            Keep being the amazing person
+            you are and never stop
+            smiling. 🌸
+
+            <br><br>
+
+            Here's to another year of
+            beautiful moments,
+            crazy memories and lots
+            of happiness. 🥳
+
+            <br><br>
+
+            <strong>
+                HAPPY BIRTHDAY Harshuu! ❤️🎂
+            </strong>
+
+        </p>
+
+        <br><br>
+
+        <button
+            onclick="nextPage('gallery')"
+        >
+
+            📸 OUR MEMORIES
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PAGE 8 — GALLERY
+========================= -->
+
+<section
+    class="page gallery-page"
+    id="gallery"
+>
+
+    <div class="gallery-container">
+
+        <h2 class="gallery-title">
+            Moments in Time
+        </h2>
+
+        <p class="gallery-subtitle">
+
+            A few memories worth keeping forever. ❤️
+
+        </p>
+
+
+        <div class="gallery">
+
+
+            <!-- PHOTO 1 -->
+
+            <div class="photo-card">
+
+                <img
+                    src="photos/suhani1.jpg"
+                    alt="Harshuu"
+                    onerror="
+                    this.style.display='none';
+                    this.nextElementSibling.style.display='flex';
+                    "
+                >
+
+                <div
+                    class="placeholder"
+                    style="display:none"
+                >
+
+                    <span>📸</span>
+
+                    <p>
+                        Photo 1
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PHOTO 2 -->
+
+            <div class="photo-card">
+
+                <img
+                    src="photos/suhani2.jpg"
+                    alt="Harshuu"
+                    onerror="
+                    this.style.display='none';
+                    this.nextElementSibling.style.display='flex';
+                    "
+                >
+
+                <div
+                    class="placeholder"
+                    style="display:none"
+                >
+
+                    <span>📸</span>
+
+                    <p>
+                        Photo 2
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PHOTO 3 -->
+
+            <div class="photo-card">
+
+                <img
+                    src="photos/suhani3.jpg"
+                    alt="Harshuu"
+                    onerror="
+                    this.style.display='none';
+                    this.nextElementSibling.style.display='flex';
+                    "
+                >
+
+                <div
+                    class="placeholder"
+                    style="display:none"
+                >
+
+                    <span>📸</span>
+
+                    <p>
+                        Photo 3
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PHOTO 4 -->
+
+            <div class="photo-card">
+
+                <img
+                    src="photos/suhani4.jpg"
+                    alt="Harshuu"
+                    onerror="
+                    this.style.display='none';
+                    this.nextElementSibling.style.display='flex';
+                    "
+                >
+
+                <div
+                    class="placeholder"
+                    style="display:none"
+                >
+
+                    <span>📸</span>
+
+                    <p>
+                        Photo 4
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PHOTO 5 -->
+
+            <div class="photo-card">
+
+                <img
+                    src="photos/suhani5.jpg"
+                    alt="Harshuu"
+                    onerror="
+                    this.style.display='none';
+                    this.nextElementSibling.style.display='flex';
+                    "
+                >
+
+                <div
+                    class="placeholder"
+                    style="display:none"
+                >
+
+                    <span>📸</span>
+
+                    <p>
+                        Photo 5
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PHOTO 6 -->
+
+            <div class="photo-card">
+
+                <img
+                    src="photos/suhani6.jpg"
+                    alt="Harshuu"
+                    onerror="
+                    this.style.display='none';
+                    this.nextElementSibling.style.display='flex';
+                    "
+                >
+
+                <div
+                    class="placeholder"
+                    style="display:none"
+                >
+
+                    <span>📸</span>
+
+                    <p>
+                        Photo 6
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <br><br><br>
+
+
+        <button
+            onclick="nextPage('finalPage')"
+        >
+
+            ❤️ ONE LAST THING
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FINAL PAGE
+========================= -->
+
+<section
+    class="page final-page"
+    id="finalPage"
+>
+
+    <div>
+
+        <div class="final-title">
+
+            Happy Birthday
+
+            <br>
+
+            Cutie 💖
+
+        </div>
+
+        <p class="final-subtitle">
+
+            Keep smiling. Keep shining. ✨
+
+        </p>
+
+        <button
+            onclick="celebrate()"
+        >
+
+            🎉 CELEBRATE
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     MUSIC
+========================= -->
+
+<audio
+    id="birthdayMusic"
+    loop
+>
+
+    <source
+        src="music/birthday.mp3"
+        type="audio/mpeg"
+    >
+
+</audio>
+
+
+
+<script>
+
+/* =========================
+   CREATE STARS
+========================= */
+
+const stars =
+    document.getElementById("stars");
+
+
+for (let i = 0; i < 100; i++) {
+
+    const star =
+        document.createElement("div");
+
+    star.className = "star";
+
+    star.style.left =
+        Math.random() * 100 + "%";
+
+    star.style.top =
+        Math.random() * 100 + "%";
+
+    star.style.animationDelay =
+        Math.random() * 2 + "s";
+
+    stars.appendChild(star);
+}
+
+
+/* =========================
+   PAGE NAVIGATION
+========================= */
+
+function nextPage(pageId) {
+
+    document
+        .querySelectorAll(".page")
+        .forEach(page => {
+
+            page.classList.remove("active");
+
+        });
+
+
+    const page =
+        document.getElementById(pageId);
+
+
+    page.classList.add("active");
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+
+    createFloatingEmojis(8);
+}
+
+
+/* =========================
+   LIGHTS
+========================= */
+
+function turnOnLights() {
+
+    document
+        .getElementById("lights")
+        .classList
+        .add("show");
+
+
+    createFloatingEmojis(15);
+
+
+    setTimeout(() => {
+
+        nextPage("page5");
+
+    }, 900);
+}
+
+
+/* =========================
+   MUSIC
+========================= */
+
+function playMusic() {
+
+    const music =
+        document.getElementById(
+            "birthdayMusic"
+        );
+
+
+    music.play()
+        .then(() => {
+
+            createFloatingEmojis(20);
+
+        })
+        .catch(() => {
+
+            alert(
+                "First add your song as music/birthday.mp3 🎵"
+            );
+
+        });
+
+}
+
+
+/* =========================
+   FLOATING EMOJIS
+========================= */
+
+function createFloatingEmojis(amount) {
+
+    const emojis = [
+        "❤️",
+        "💖",
+        "✨",
+        "🌸",
+        "🎉",
+        "🎈",
+        "🥳"
+    ];
+
+
+    for (let i = 0; i < amount; i++) {
+
+        const emoji =
+            document.createElement("div");
+
+
+        emoji.className =
+            "floating";
+
+
+        emoji.innerHTML =
+            emojis[
+                Math.floor(
+                    Math.random() *
+                    emojis.length
+                )
+            ];
+
+
+        emoji.style.left =
+            Math.random() * 100 + "vw";
+
+
+        emoji.style.fontSize =
+            (18 +
+            Math.random() * 25) +
+            "px";
+
+
+        emoji.style.animationDuration =
+            (4 +
+            Math.random() * 3) +
+            "s";
+
+
+        document.body
+            .appendChild(emoji);
+
+
+        setTimeout(() => {
+
+            emoji.remove();
+
+        }, 8000);
+
+    }
+
+}
+
+
+/* =========================
+   FINAL CELEBRATION
+========================= */
+
+function celebrate() {
+
+    createFloatingEmojis(70);
+
+}
+
+</script>
+
+</body>
+</html>
